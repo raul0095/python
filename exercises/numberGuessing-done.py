@@ -50,7 +50,11 @@ while max_attempts > 0:
 		print("Error: Please enter a number.")
 		continue
 	
-	max_attempts -= 1		
+	max_attempts -= 1
+	if max_attempts == 0:
+		print("Game over. No more attempts left.")
+		print("Secret number was:", secret_number)
+		break
 	if guess < secret_number:
 		print(f"Too low! You have {max_attempts} attempts left.")
 
@@ -62,10 +66,6 @@ while max_attempts > 0:
 		remaining_attempts = config["max_attempts"] - max_attempts
 		print(f"Correct! You guessed it in {remaining_attempts} attempts.")
 		break
-
-if max_attempts == 0:
-	print("Game over. No more attempts left.")
-	print("Secret number was:", secret_number)
 
 # have the menu on multiple lines
 # name from dictionary might be unnecesarry, consider removing it or use it when selecting menu
