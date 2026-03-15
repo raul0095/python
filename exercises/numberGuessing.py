@@ -2,17 +2,14 @@ import random
 
 difficulties = {
 	1: {
-		"name": "Easy mode - 10 attempts",
 		"max_attempts": 10,
 		"max_number": 10
 	},
 	2: {
-		"name": "Medium mode - 8 attempts",
 		"max_attempts": 8,
 		"max_number": 50
 	},
 	3: {
-		"name": "Hard mode - 6 attempts",
 		"max_attempts": 6,
 		"max_number": 100
 	}
@@ -32,7 +29,6 @@ while True:
 		print("Error: Choose one of the listed difficulty numbers.")
 		continue
 		
-print(config["name"])
 max_attempts = config["max_attempts"]
 secret_number = random.randint(1, config["max_number"])
 
@@ -68,4 +64,11 @@ while max_attempts > 0:
 		break
 
 # have the menu on multiple lines
-# name from dictionary might be unnecesarry, consider removing it or use it when selecting menu
+# consider the usage of key "name" from dictionary
+
+# Add replay functionality (functions):
+# replay = str(input("Do you want to play again? (y/n):"))
+# if replay == "y":
+# 	print("Game will be replayed.")
+# elif replay == "n":
+# 	print("Thank you for playing.")
