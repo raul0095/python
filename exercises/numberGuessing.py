@@ -18,7 +18,12 @@ difficulties = {
 # difficulty choice and validation loop
 while True:
 	try:
-		choice = int(input("Choose a difficulty: 1 - Easy (1-10)  2 - Medium (1-50)  3 - Hard (1-100)"))
+		choice = int(input("""Choose a difficulty:
+1 - Easy (1-10)  
+2 - Medium (1-50)  
+3 - Hard (1-100)
+		""")
+		)
 		config = difficulties[choice]
 		break
 	except ValueError:
@@ -33,7 +38,8 @@ max_attempts = config["max_attempts"]
 secret_number = random.randint(1, config["max_number"])
 
 # guessing loop
-while max_attempts > 0:
+won = False
+while won is False:
 	try:
 		guess = int(input(f"Enter your guess (1-{config['max_number']}): "))
 		if guess > config["max_number"]:
@@ -58,17 +64,18 @@ while max_attempts > 0:
 		print(f"Too high! You have {max_attempts} attempts left.")
 
 	else:
+		won = True
 		# this means the guessed number equals the secret number
 		remaining_attempts = config["max_attempts"] - max_attempts
 		print(f"Correct! You guessed it in {remaining_attempts} attempts.")
 		break
 
-# have the menu on multiple lines
-# consider the usage of key "name" from dictionary
 
 # Add replay functionality (functions):
+
 # replay = str(input("Do you want to play again? (y/n):"))
 # if replay == "y":
 # 	print("Game will be replayed.")
+# 	gameFunction()
 # elif replay == "n":
 # 	print("Thank you for playing.")

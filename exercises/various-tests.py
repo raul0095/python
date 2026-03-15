@@ -71,11 +71,11 @@ while won is False:
 		break
 
 
-# consider the usage of key "name" from dictionary
-
 # Add replay functionality (functions):
+
 # replay = str(input("Do you want to play again? (y/n):"))
 # if replay == "y":
 # 	print("Game will be replayed.")
+# 	gameFunction()
 # elif replay == "n":
 # 	print("Thank you for playing.")
