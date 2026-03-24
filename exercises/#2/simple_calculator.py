@@ -18,12 +18,6 @@ operators = {
 }
 
 
-
-
-
-
-
-
 # print(operators[1]["operator"])
 
 while True:

@@ -28,11 +28,9 @@ while True:
 		break
 	except ValueError:
 		print("Error: Please enter a number.")
-		continue
 			
 	except KeyError:
 		print("Error: Choose one of the listed difficulty numbers.")
-		continue
 		
 max_attempts = config["max_attempts"]
 secret_number = random.randint(1, config["max_number"])
