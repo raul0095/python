@@ -34,6 +34,7 @@ while True:
 		
 max_attempts = config["max_attempts"]
 secret_number = random.randint(1, config["max_number"])
+print(secret_number)
 
 # guessing loop
 won = False
