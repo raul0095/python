@@ -42,4 +42,4 @@ def create_character(name, strength, intelligence, charisma):
         )
 
 
-print(create_character('ren', 4, 2, 1))
+print(create_character('ren', 1, 3, 3))
