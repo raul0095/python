@@ -8,7 +8,7 @@ operators = {
 	4: "4. Quit"
 }
 
-print(operators[2])
+# print(operators[2])
 
 todo = ["Add task", "Remove task", "View Tasks", "Quit"]
 for i, value in enumerate(todo, 1):

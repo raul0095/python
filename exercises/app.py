@@ -38,7 +38,7 @@ text = "This is a string."
 
 print("Initial: ", text)
 
-print("Folosim .replace() ca sa inlocuim parti din string: ", text.replace('string', 'how to replace a string'))
+print("We use .replace() to replace parts of the string: ", text.replace('string', 'how to replace a string'))
 if "string" in text:
  	print("Good job!")
 
